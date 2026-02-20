@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meesho Label Optimizer | Label Crop Tool</title>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <style>
+        :root { 
+            --meesho-pink: #9f2089; 
+            --meesho-dark: #222; 
+            --flipkart-blue: #2874f0;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: #fdf0f5; padding: 0; color: var(--meesho-dark); margin: 0; }
+        
+        /* AD LAYOUT WRAPPER */
+        .page-layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .ad-sidebar {
+            width: 160px;
+            min-height: 600px;
+            background: white;
+            border: 2px dashed #ddd;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            position: sticky;
+            top: 20px;
+            text-align: center;
+        }
+
+        .wrapper { flex: 1; max-width: 850px; display: flex; flex-direction: column; }
+
+        .header-section { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: white;
+            border-radius: 20px;
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 6px solid var(--meesho-pink);
+        }
+
+        .main-heading { font-size: 20px; font-weight: bold; color: var(--meesho-pink); }
+        
+        .flipkart-link-area {
+            padding: 12px 25px;
+            background: var(--flipkart-blue);
+            color: white;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(159, 32, 137, 0.1); 
+            border-top: 10px solid var(--meesho-pink); 
+        }
+
+        #drop-area { 
+            border: 3px dashed #ddd; 
+            border-radius: 15px; 
+            padding: 60px 20px; 
+            background: #fffafc; 
+            cursor: pointer; 
+            font-weight: bold; 
+            color: var(--meesho-pink); 
+            font-size: 24px; 
+            text-align: center; 
+        }
+
+        .btn-start { 
+            background: var(--meesho-pink); 
+            color: white; border: none; padding: 20px; width: 100%; border-radius: 12px; font-size: 26px; cursor: pointer; display: none; margin-top: 20px; font-weight: bold; 
+        }
+
+        /* Responsive: Hide ads on small screens */
+        @media (max-width: 1200px) {
+            .ad-sidebar { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-layout">
+    <div class="ad-sidebar">Advertisement<br>Space</div>
+
+    <div class="wrapper">
+        <div class="header-section">
+            <div class="main-heading">Meesho Shipping Labels (SKU Sort)</div>
+            <a href="../index.html" class="flipkart-link-area">Flipkart 3x5</a>
+        </div>
+
+        <div class="card">
+            <div id="drop-area">DRAG & DROP LABELS HERE</div>
+            <div style="margin-top: 20px; text-align: center;">
+                <input type="checkbox" id="showStamp" checked>
+                <label for="showStamp">Include Date and Time Stamp</label>
+            </div>
+            <input type="file" id="picker" multiple accept=".pdf" style="display:none">
+            <button id="runBtn" class="btn-start" onclick="processPDFs()">GENERATE LABELS</button>
+        </div>
+
+        <div id="history-box" style="display:none; background:white; margin-top:15px; border-radius:12px; padding:20px;">
+            <div id="file-list"></div>
+        </div>
+    </div>
+
+    <div class="ad-sidebar">Advertisement<br>Space</div>
+</div>
+
+<script>
+    // Aapki Script M ki original logic yahan paste karein
+    // (Jaise processPDFs function aur file handling)
+</script>
+
+</body>
+</html>
